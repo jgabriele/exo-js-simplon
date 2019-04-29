@@ -21,6 +21,12 @@
       // We add a listener on the Load user button's click
       function onClick() {
         document.querySelector('.loading').classList.add('visible')
+        
+        // We hide the loading after 2 seconds
+        function hideLoading() {
+          document.querySelector('.loading').classList.remove('visible')
+        }
+        setTimeout(hideLoading, 2000) // 2000 milliseconds === 2 seconds
       }
       
       document.querySelector('#load-user-button').addEventListener('click', onClick)
