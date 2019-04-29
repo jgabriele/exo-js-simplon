@@ -41,10 +41,9 @@
 
           console.log(users)
 
-          insertUserInHTML({
-            first_name: 'Jérémy',
-            last_name: 'Gabriele',
-            avatar: 'https://lh3.googleusercontent.com/-Tq62yhDqMi0/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rcwQV4Na8ztkp1zaCRU2jha5rtT6Q/s64-c-mo/photo.jpg'
+          // We loop on our users and display them one by one
+          users.forEach(function(user) {
+            insertUserInHTML(user)
           })
 
           hideLoading()
