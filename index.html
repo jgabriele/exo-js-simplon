@@ -4,7 +4,11 @@
   </head>
   <style>
     .loading {
-      display: block
+      display: none
+    }
+
+    .loading.visible {
+      display: block;
     }
   </style>
   <body>
@@ -16,7 +20,7 @@
     <script>
       // We add a listener on the Load user button's click
       function onClick() {
-        console.log('Button clicked')
+        document.querySelector('.loading').classList.add('visible')
       }
       
       document.querySelector('#load-user-button').addEventListener('click', onClick)
